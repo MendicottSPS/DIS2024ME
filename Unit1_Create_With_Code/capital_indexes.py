@@ -10,14 +10,16 @@
 print("Welcome to this program!")
 print("Here I will let you know the number of capital letters in the title of a book.")
 title = input("Please enter the title of the book here: ")
+
 def capital_indexes(s):
     upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     result = []
     for i, l in enumerate(s):
         if l in upper:
-            result.append(i)
-    return result
-print(capital_indexes(title))
+            result.append(i+1)
+            return result
+print("The capital letters in your title are", capital_indexes(title))
+
 
 
 '''
