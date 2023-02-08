@@ -5,6 +5,7 @@
 # Wordle is a great example of this
 
 # This program is a bsaic example of how the guessing number game should work
+# This is the one that works well
 
 import random
 num = random.randint(0, 100)
@@ -22,7 +23,7 @@ while guess != num:
             guess = int(input("Try a different guess: "))
     else:
         break
-print("Yes! That's correct! How amazing are you?! The number was", num, "!")
+print("Yes! That's correct! How amazing are you?! The number was",num, "!")
 
 
 '''

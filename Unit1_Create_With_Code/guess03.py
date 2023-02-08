@@ -1,4 +1,5 @@
 # fourth trial test of the number guessing game using a scoring system
+# This one doesn't tell you if you got the answer right or not, when you get the answer right, the program just ends
 
 import random
 num = random.randint(0, 100)

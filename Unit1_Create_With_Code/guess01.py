@@ -2,6 +2,8 @@
 # Setting a maximum number of guesses, telling the suer the number of guesses they have
 # using this variable they play the game
 
+# This one works but after one go won't tell you higher or lower
+
 import random
 num = random.randint(0, 100)
 welcome_msg = '''Welcome to ths number guessing game!
