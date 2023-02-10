@@ -7,15 +7,12 @@ guess = int(input("Take a guess here: "))
 made_guesses = 7
 count = 0
 
+print(num)
+
 while guess != num:
-    if count > 7:
+    if count == 6:
         print("You have exceeded the number of guesses! The number was", num)
         guess = int(input("Guess a number between 1 and 100. Take a guess here: "))
-    if guess == num:
-        count += 1
-        print("Yes! That's correct! How amazing are you?! ")
-        print("The number was", num, "!")
-        print("It took you", count, "guesses")
     elif guess > num:
         print("No, that's too high, try guessing a lower number.")
         guess = int(input("Try a different guess: "))
@@ -31,8 +28,9 @@ while guess != num:
         made_guesses = made_guesses - 1
         count += 1
     else:
+        count += 1
+        print("Yes! That's correct! How amazing are you?! ")
+        print("The number was", num, "!")
+        print("It took you", count, "guesses")
         break
-
-
-
 

@@ -4,8 +4,9 @@
 # Try 6 guesses to start with
 # Wordle is a great example of this
 
-# This program is a bsaic example of how the guessing number game should work
+# This program is a basic example of how the guessing number game should work
 # This is the one that works well
+# Does not tell you how many tries it took you
 
 import random
 num = random.randint(0, 100)
@@ -19,11 +20,11 @@ while guess != num:
         print("No, that's too high, try guessing a lower number.")
         guess = int(input("Try a different guess: "))
     elif guess < num:
-            print("No, that's too low, try guessing a higher number.")
-            guess = int(input("Try a different guess: "))
+        print("No, that's too low, try guessing a higher number.")
+        guess = int(input("Try a different guess: "))
     else:
         break
-print("Yes! That's correct! How amazing are you?! The number was",num, "!")
+print("Yes! That's correct! How amazing are you?! The number was", num, )
 
 
 '''
