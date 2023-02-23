@@ -1,0 +1,46 @@
+
+<!doctype html>
+<html>
+    <head>
+    </head>
+            <style>
+                p.error{
+                    color: red;
+                    }
+                    h2{
+                        text-align:center;
+                        }
+
+            </style>
+        <body>
+    <h2>User Registration</h2>
+
+    {% for message in form.email.errors %}
+        <div><p class="error">{{message}}</p></div>
+    {% endfor}
+
+    {% for message in form.confirm_passowrd.errors %}
+        <div><p class="error">{{message}}</p></div>
+    {% endfor}
+
+    <form action = "http://127.0.0.1:5000/registration" method="post">
+        <fieldset>
+            {{ form.hidden_tag }}
+            {{ form.email.label }}
+            {{ form.email }}
+            <br><br>
+            {{ form.password.label }}
+            {{ form.password }}
+            <br><br>
+            {{ form.confirm_password.label }}<br>
+            {{ form.confirm_password }}
+            <br><br>
+
+            {{ form.submit }}
+
+        </fieldset>
+    </form>
+
+    </body>
+
+</html>
