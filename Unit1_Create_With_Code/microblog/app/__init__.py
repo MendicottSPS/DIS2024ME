@@ -1,9 +1,10 @@
-# Initialiser program
+
 from flask import Flask
-from config import Config
+from Unit1_Create_With_Code.microblog.config import Config
 
 app = Flask(__name__)
 app.config.from_object(Config)
+app.config['SECRET_KEY'] = 'a very long string'
 
-from app import routes
+from Unit1_Create_With_Code.microblog.app import routes
 
